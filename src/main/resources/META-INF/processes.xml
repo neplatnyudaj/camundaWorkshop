@@ -1,0 +1,8 @@
+<process-application xmlns="http://www.camunda.org/schema/1.0/ProcessApplication">
+
+    <process-archive name="Workshop">
+        <process-engine>default</process-engine>
+        <resource>processes/workshop.bpmn</resource>
+    </process-archive>
+
+</process-application>
