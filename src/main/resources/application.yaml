@@ -1,0 +1,32 @@
+spring.application.name: workshopApplication
+spring:
+  datasource:
+    jdbcBatchProcessing: false
+    url: jdbc:h2:mem:example-simple;MODE=Oracle;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  h2:
+    console:
+      enabled: true
+camunda:
+  bpm:
+    database:
+      type: h2
+      jdbcBatchProcessing: false
+    application:
+      delete-upon-undeploy: false
+      scan-for-process-definitions: false
+      deploy-changed-only: true
+      resume-previous-versions: true
+      resume-previous-by: a value
+    job-execution:
+      enabled: true
+      failed-job-retry-time-cycle: R1/PT5M
+      core-pool-size: 20
+      max-pool-size: 40
+      queue-capacity: 10
+    metrics:
+      enabled: true
+      db-reporter-activate: true
+    admin-user:
+      id: demo
+      password: demo
+    history-level: FULL
